@@ -35,14 +35,22 @@ const List = () => {
         </div>
         {list.map((item,index) => {
           return (
-            <div key={index} className='list-table-format'>
-              <img src={`http://localhost:4000/images/${item.image}`} alt="" />
+            <div key={index} className="list-table-format">
+              <img
+                src={`https://food-delivery-app-backend-4ncu.onrender.com/images/${item.image}`}
+                alt=""
+              />
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>${item.price}</p>
-              <p onClick={()=>removeFood(item._id)} style={{cursor:'pointer'}}>X</p>
+              <p
+                onClick={() => removeFood(item._id)}
+                style={{ cursor: "pointer" }}
+              >
+                X
+              </p>
             </div>
-          )
+          );
         })}
       </div>
     </div>
