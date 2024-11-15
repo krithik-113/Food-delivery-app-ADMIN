@@ -54,7 +54,10 @@ const Add = () => {
             />
           </label>
           <input
-            onChange={(e) => setImage(e.target.files[0])}
+            onChange={(e) => {
+              setImage(e.target.files[0])
+              console.log(e.target.files)
+            }}
             type="file"
             id="image"
             hidden
@@ -88,7 +91,7 @@ const Add = () => {
             <select name="category" onChange={onChangeHandler}>
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
-              <option value="Desert">Desert</option>
+              <option value="Deserts">Deserts</option>
               <option value="Sandwich">Sandwich</option>
               <option value="Cake">Cake</option>
               <option value="Pure Veg">Pure Veg</option>
