@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const root = createRoot(document.getElementById("root"));
-axios.defaults.baseURL = "https://food-delivery-app-backend-4ncu.onrender.com";
+axios.defaults.baseURL = "http://localhost:4000"; // https://food-delivery-app-backend-4ncu.onrender.com
 root.render(
   <BrowserRouter>
     <App />

@@ -19,7 +19,8 @@ const Add = () => {
     };
     
     const onSubmitHandler = async (e) => {
-        e.preventDefault()
+      e.preventDefault()
+      
         const formData = new FormData()
         formData.append('name', data.name)
         formData.append('description', data.description)
@@ -49,12 +50,16 @@ const Add = () => {
           <p>Upload Image</p>
           <label htmlFor="image">
             <img
-              src={image ? window.URL.createObjectURL(image) : assets.upload_area}
+              src={
+                image
+                  ? window.webkitURL.createObjectURL(image)
+                  : assets.upload_area
+              }
               alt=""
             />
           </label>
           <input
-            onChange={(e) =>setImage(e.target.files)}
+            onChange={(e) => setImage(e.target.files[0])}
             type="file"
             id="image"
             hidden
