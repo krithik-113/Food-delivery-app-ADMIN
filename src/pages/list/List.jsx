@@ -37,7 +37,7 @@ const List = () => {
           return (
             <div key={index} className="list-table-format">
               <img
-                src={`https://food-delivery-app-backend-4ncu.onrender.com/images/${item.image}`}
+                src={item.image}
                 alt=""
               />
               <p>{item.name}</p>
