@@ -54,10 +54,7 @@ const Add = () => {
             />
           </label>
           <input
-            onChange={(e) => {
-              setImage(e.target.files[0])
-              console.log(e.target.files)
-            }}
+            onChange={(e) =>setImage(e.target.files)}
             type="file"
             id="image"
             hidden
